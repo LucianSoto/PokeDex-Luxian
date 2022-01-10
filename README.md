@@ -21,4 +21,4 @@ Possible Improvements
 -Expanding the app to cover all pokemon and not just the original 151.
 -May upload to github pages.
 
-Credits to 
+Credits to websites used for images
