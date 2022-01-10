@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fuzzy+Bubbles&family=Krona+One&family=Press+Start+2P&family=Titillium+Web:wght@300&display=swap');
+
+:root {
+  --color-red: rgb(247, 22, 22);
+  --color-screen: rgb(70, 204, 110);
+  --color-screen-text: rgb(161, 187, 65);
+  --color-screen-container: rgb(248, 247, 233);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+/* use Before::After to fix background picture opacity not working */
+
+
+body{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-family: 'press start 2p', 'Fredokak One', Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-purple);
+  background-image: linear-gradient(
+      115deg,
+      rgba(170, 50, 206, 0.9),
+      rgba(100, 80, 200, 0.5)
+    ),
+    url(https://i.pinimg.com/originals/c9/13/40/c91340f832096e32b50c593c77508295.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.pokedex-container {
+  background: var(--color-red);
+  height: 700px;
+  width: 1000px; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px 30px 10px 30px;
+  border: solid 8px black;
+}
+
+.screen-container {
+  background-color: var(--color-screen-container);
+  height: 500px;
+  width: 920px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 5px solid black;
+}
+
+.screen {
+  width: 97%;
+  height: 95%;
+  background-color: var(--color-screen); 
+  border-radius: 3px;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-half-screen {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  align-items: center;
+}
+
+.poke-pic {
+  width: 320px;
+  margin-top: 0px;
+}
+
+.name {
+  margin-top: 30px;
+}
+
+.right-half-screen {
+  width: 50%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.lower-container {
+  margin-top: 50px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+}
+
+.search {
+  border-radius: 3px;
+  border: 5px solid black;
+  height: 50px;
+  width: 250px;
+  background-color: var(--color-screen);
+  margin-left: 50px;
+  font-family: 'press start 2p', 'Fredokak One', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.submit {
+  
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: purple;
+  border: 5px solid black;
+  font-size: 30px;
+}
+
+.submit:hover {
+  background-color:rgb(100, 9, 185);
+}
+
+.info-button{
+  position: relative;
+  left: 150px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid black;
+  font-size: 30px;
+  background-color: aqua;
+  font-style: italic;
+  font-weight: bold;
+  /* transition: transform 1s ease-out; */
+}
+
+.submit {
+  font-size: 25px;
+}
+
+.left, .right {
+  border: 5px solid black;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  width: 100px;
+  background-color: darkgray;
+}
+
+.left {
+  margin-left: 100px;
+  border-radius: 15px 00px 0px 15px;
+}
+
+.right {
+  margin-left: 15px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.left:hover, .right:hover {
+  background-color: rgb(139, 139, 139)
+}
+
+.info-button i {
+  font-size: 30px;
+}
+
+.info-button:hover {
+  background-color: rgb(16, 201, 201);
+  
+}
+
+.info-button:hover, .left:hover, .right:hover, .submit:hover {
+transform: translateY(1px);
+}
+
+.info-modal {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  padding-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  overflow: scroll;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  background: black;
+  border-radius: 5px;
+}
+
+.pokemon-logo {
+  width: 400px;
+  margin: 100px 0px 40px 0px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.info-modal p {
+  width: 700px;
+}
+
+.last-p {
+  padding-bottom: 30px;
+}
+
+.player {
+  display: none;
+}
+
+.invalid-modal {
+  width: 100%;
+  align-self: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.continue {
+  border: none;
+  width: 240px;
+  height: 60px;
+  background-color: rgb(243, 243, 82);
+  border-radius: 20px;
+  font-family: 'press start 2p', 'Fredokak One', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}

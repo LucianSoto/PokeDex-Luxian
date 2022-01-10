@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/0429c478a9.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>PokeDex</title>
+</head>
+<body> 
+
+  <div class="pokedex-container">
+    <div class="screen-container">
+      <div class="screen"> 
+        
+        <!-- display loading first
+            then show pokemon pokedex LOGO
+        -->
+        <!-- On Load Info Modal -->
+        <div class="info-modal" id="info-modal">
+          <img src="./imgs/logo2.png" class="pokemon-logo" alt="">
+          <h2>welcome to luxians pokedex</h2>
+          <h3>*this pokedex focuses on the original 151 pokemon</h3>
+          <p>-type a pokemon name in the input box below to find information on your favorite pokemon.</p>
+          <p>-you can also use the left and right arrows to navigate back and fourth through pokemon by their id  number.</p>
+          <p>-background music works most of the times if you don't hear anything just reload the page.</p>
+          <p>credits to all the images used to make this weebapp possible.</p>
+          <p>-thanks for checking it out :D</p>
+          <p class="last-p">-press the info or arrow buttons to begin!</p>
+        </div>
+        <!-- Invalid entry modal -->
+        <div class="invalid-modal" id="invalid-modal">
+          <h2 class="invalid-name" id="invalid-name"></h2>
+          <br>
+          <h2 id="is-not">is not a valid pokemon</h2>
+          <br>  
+          <h2>try again!</h2>
+          <br>
+          <button class="continue" id="continue">CONTINUE</button>
+        </div>
+        <!--  Result Screen Left Side  -->
+        <div class="left-half-screen screens" id="left-half-screen">
+          <img class="poke-pic" id="poke-pic" src="" alt="">
+          <h2 class="name" id="name"></h2>
+        </div>
+        <!--  Result Screen Right Side -->
+        <div class="data right-half-screen screens" id="right-half-screen">
+          <h4 class="type" id="type"></h4>
+          <h4 id="id" class="id"></h4>
+          <h4 class="weight" id="weight"></h4>
+          <h4 class="height" id="height"></h4>
+          <h4 class="attack" id="attack"></h4>
+          <!-- 
+            different types
+            of info
+          -->
+        </div>
+      </div>
+    </div>
+
+    <!-- maybe make buttons??
+        such as prev and next
+    -->
+    <div class="lower-container">
+      <input type="text" class="search" id="search">
+      <button class="submit" type="submit" id="submit"><i class="fas fa-check" id="check"></i></button>
+      <button class="left" id="left"><</button>
+      <button class="right" id="right">></button>
+      <button class="info-button" id="info-button">i</button>
+    </div>
+  </div>
+
+  <div class="player">
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/542751216&color=%235d0090&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vgmc" title="Video Game Music Compendium" target="_blank" style="color: #cccccc; text-decoration: none;">Video Game Music Compendium</a> · <a href="https://soundcloud.com/vgmc/sets/pokemon-red-blue-1998" title="Pokémon Red / Blue (1998)" target="_blank" style="color: #cccccc; text-decoration: none;">Pokémon Red / Blue (1998)</a></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
