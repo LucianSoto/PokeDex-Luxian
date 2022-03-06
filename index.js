@@ -101,7 +101,7 @@ async function nextOrPreviousPokemon (id) {
     type.innerHTML = `type: ${data.types[0].type.name}`
     height.innerHTML = `height: ${data.height}0 cm`
     weight.innerHTML = `weight: ${Math.floor(data.weight * 0.1)} kg`
-    attack.innerHTML = `attack: ${data.abilities[0].ability.name}`
+    attack.innerHTML = `ability: ${data.abilities[0].ability.name}`
     pokemonID.innerHTML = `id: ${data.id}`
 
     return data
