@@ -256,3 +256,87 @@ h2 {
   font-family: 'press start 2p', 'Fredokak One', Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
+
+/* Responsive  */
+@media screen and (max-width:800px) {
+  /* html {
+    width: 100vw;
+    height: 100vh;
+  } */
+
+  body::before{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    position:relative;
+  }
+
+  body{
+    
+  }
+
+  .pokedex-container {
+    height: 97%;
+    width: 97%;
+    padding: 0;
+    padding: 5px;
+  }
+
+  .screen-container {
+    height: 90%;
+    width: 90%;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .screen {
+    
+  }
+
+  .left-half-screen {
+    width: 0;
+    
+  }
+
+  .poke-pic {
+    width: 0px;
+  }
+
+  .name {
+    margin-top: 0;
+  }
+
+  .right-half-screen{
+    
+  }
+
+  .lower-container{
+    margin-top: 0;
+    height: 0;
+    width: 50%;
+  }
+
+  .search{
+  
+  }
+
+  /* .submit {
+    margin: 0;
+  } */
+
+  .info-button{
+    left: 0;
+  }
+
+
+  
+  .pokemon-logo{
+    width: 97%;
+    margin: -20px 0 0 0;
+  }
+
+  h2{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
